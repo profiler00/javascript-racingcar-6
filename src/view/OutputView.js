@@ -1,16 +1,17 @@
 import { MissionUtils } from '@woowacourse/mission-utils';
 import { message } from '../constants/messages';
-import { integer } from '../constants/constants';
 
 const Output = {
-  roundAttempt(attempt) {
-    MissionUtils.Console.print(`${message.ATTEMPT} ${attempt + integer.ONE}:`);
+  printResult() {
+    MissionUtils.Console.print(message.ROUND);
   },
-  roundResult(car) {
-    MissionUtils.Console.print(`${car.name} : ${'-'.repeat(car.position)}`);
+  roundResult(car, distance) {
+    MissionUtils.Console.print(
+      `${car.name} : ${Array.from({ length: distance }, () => '-').join('')}`,
+    );
   },
   winner(winners) {
-    MissionUtils.Console.print(`${message.END} ${winners.join(', ')}`);
+    MissionUtils.Console.print(`${message.END} : ${winners.join(', ')}`);
   },
 };
 
