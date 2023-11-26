@@ -1,7 +1,7 @@
 import { MissionUtils } from '@woowacourse/mission-utils';
 
 class Car {
-  constructor() {
+  constructor(name) {
     this.name = name;
     this.position = 0;
   }
