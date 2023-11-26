@@ -1,5 +1,6 @@
 import { exception } from '../constants/messages';
 
+// TODO: Mission 5: 오류 처리 메서드입니다.
 const Validation = {
   checkNull(input) {
     if (!input) throw new Error(exception.NULL);
