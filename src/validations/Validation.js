@@ -1,13 +1,13 @@
-import { EXCEPTION } from '../constants/messages';
+import { exception } from '../constants/messages';
 
 const Validation = {
   checkNull(input) {
-    if (!input) throw new Error(EXCEPTION.null);
+    if (!input) throw new Error(exception.NULL);
   },
   checkNameLength(input) {
     input.map(name => {
-      if (name.lengh > 6) {
-        throw new Error(EXCEPTION.length);
+      if (name.length >= 6) {
+        throw new Error(exception.LENGTH);
       }
       return name;
     });
@@ -15,7 +15,7 @@ const Validation = {
   checkCount(input) {
     input.split(',').forEach(character => {
       if (!'0123456789'.includes(character)) {
-        throw new Error(EXCEPTION.count);
+        throw new Error(exception.INTEGER);
       }
     });
   },
