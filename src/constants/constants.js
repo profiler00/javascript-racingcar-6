@@ -1,5 +1,5 @@
 const random = {
-  LIMIT: 4,
+  LIMIT: 3,
   MIN_RANGE: 0,
   MAX_RANGE: 9,
 };
